@@ -53,7 +53,7 @@ Begin VB.Form frmSchemaProgress
       EndProperty
       Height          =   855
       Left            =   2460
-      Picture         =   "frmSchemaProgress.frx":030A
+      Style           =   1  'Graphical
       TabIndex        =   4
       ToolTipText     =   "Start Processing Schemas"
       Top             =   4440
@@ -72,7 +72,7 @@ Begin VB.Form frmSchemaProgress
       EndProperty
       Height          =   855
       Left            =   180
-      Picture         =   "frmSchemaProgress.frx":0FD4
+      Style           =   1  'Graphical
       TabIndex        =   3
       ToolTipText     =   "Start Processing Schemas"
       Top             =   4440
@@ -91,7 +91,7 @@ Begin VB.Form frmSchemaProgress
       EndProperty
       Height          =   855
       Left            =   4740
-      Picture         =   "frmSchemaProgress.frx":1C9E
+      Style           =   1  'Graphical
       TabIndex        =   2
       ToolTipText     =   "Stop processing Schemas and return to the Windows Desktop"
       Top             =   4440
@@ -110,7 +110,7 @@ Begin VB.Form frmSchemaProgress
       EndProperty
       Height          =   855
       Left            =   8040
-      Picture         =   "frmSchemaProgress.frx":1FA8
+      Picture         =   "frmSchemaProgress.frx":030A
       Style           =   1  'Graphical
       TabIndex        =   1
       ToolTipText     =   "Start Processing Schemas"
@@ -137,8 +137,8 @@ Begin VB.Form frmSchemaProgress
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ColScrollRegions=   "frmSchemaProgress.frx":2C72
-      Override        =   "frmSchemaProgress.frx":2CB0
+      ColScrollRegions=   "frmSchemaProgress.frx":0FD4
+      Override        =   "frmSchemaProgress.frx":1012
       Caption         =   "Schemas To Be Processed"
    End
    Begin ActiveResizer.SSResizer SSResizer1 
@@ -267,7 +267,7 @@ Public Function InitForm(InRs As Recordset) As Boolean
    InitForm = True
    Exit Function
 FunctionError:
-   goSession.RaisePublicError "General Error in frmSchemaProgress.InitForm.", err.Number, err.Description
+   goSession.RaisePublicError "General Error in frmSchemaProgress.InitForm.", Err.Number, Err.Description
    InitForm = False
 End Function
 
